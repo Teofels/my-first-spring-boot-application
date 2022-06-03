@@ -1,7 +1,7 @@
 package com.example.myfirstspringbootapplication;
 
 import com.example.myfirstspringbootapplication.dto.Customer;
-import com.example.myfirstspringbootapplication.service.CustomerRepository;
+import com.example.myfirstspringbootapplication.service.CustomerService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.slf4j.Logger;
@@ -20,7 +20,7 @@ public class MyFirstSpringBootApplication {
 
 
 	@Bean
-	public CommandLineRunner demo(CustomerRepository repository) {
+	public CommandLineRunner demo(CustomerService repository) {
 		return (args) -> {
 			// save a few customers
 			repository.save(new Customer("Jack", "Bauer"));
